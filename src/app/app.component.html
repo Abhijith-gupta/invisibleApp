@@ -4,13 +4,21 @@
     [colHeaders]="true"
     [rowHeaders]="true"
     height="auto"
-    width= 100%
+    width="100%"
     [manualColumnMove]="true"
     [manualColumnResize]="true"
+    [fixedColumnsLeft]="1"
+    [contextMenu]="true"
+    [manualColumnFreeze]="true"
     licenseKey="non-commercial-and-evaluation"
   >
     <hot-column data="id" [readOnly]="true" title="ID"></hot-column>
     <hot-column data="budget" title="Budget"></hot-column>
+    <hot-column>
+      <label class="btn-primary" ngbButtonLabel>
+        <input ngbButton /> Middle
+      </label>
+    </hot-column>
     <hot-column data="originalLang" title="Original Lang"></hot-column>
     <hot-column data="originalTitle" title="Original Title"></hot-column>
     <hot-column data="popularity" title="Popularity"></hot-column>
@@ -23,5 +31,6 @@
     <hot-column data="voteAverage" title="Vote Average"></hot-column>
     <hot-column data="voteCount" title="Vote Count"></hot-column>
     <hot-column data="overview" title="Over View"></hot-column>
+    
   </hot-table>
 </div>
